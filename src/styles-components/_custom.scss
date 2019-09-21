@@ -1,0 +1,27 @@
+//region Reset
+body {
+    min-width: 320px;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-rendering: optimizeLegibility;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-right: 0!important;
+    padding-left: 0!important;
+    margin: 0;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+//endregion
+
+.center-components {
+    width: 700px;
+    position: absolute !important;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

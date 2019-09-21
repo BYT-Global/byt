@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "beyourtrip": {
+      "hosting": {
+        "app": [
+          "beyourtrip"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "beyourtrip"
+  }
+}
