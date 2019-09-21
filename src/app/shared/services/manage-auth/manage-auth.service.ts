@@ -9,4 +9,6 @@ export class ManageAuthService {
     constructor(private http: HttpClient) {}
 
     authGoogle(token) { return this.http.get(`${environment.msAuth}/authGoogle/${token}`); }
+
+    authFacebook(token) { return this.http.get(`${environment.msAuth}/authFacebook/${token}`); }
 }

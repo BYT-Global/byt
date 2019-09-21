@@ -33,6 +33,21 @@ export class AuthComponent implements OnInit {
             .catch(console.log);
     }
 
+    async facebookAuth() {
+        this._manageFirebaseService
+            .facebookAuth()
+            .then((res: any) => this._manageAuthService.authFacebook(res.credential.accessToken))
+            .then((res) => res.subscribe((result: any) => {
+                if (result.token) {
+                    this._manageTokenService.setToken(result.token);
+                    this.goToDash();
+                } else {
+                    console.log(result);
+                }
+            }))
+            .catch(console.log);
+    }
+
     async goToDash() {
         await this.ngZone.run(async () => await this._router.navigate(['']));
     }

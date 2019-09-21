@@ -20,6 +20,12 @@ export class ManageFirebaseService {
             .signInWithPopup(new auth.GoogleAuthProvider());
     }
 
+    facebookAuth() {
+        return this.angularFireAuth
+            .auth
+            .signInWithPopup(new auth.FacebookAuthProvider());
+    }
+
     signOut(): Promise<any> {
         return this.angularFireAuth
             .auth
